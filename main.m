@@ -3,7 +3,7 @@
 //  SSHLauncher
 //
 //  Created by Martin Jansen on 11.05.10.
-//  Copyright Bauer + Kirch GmbH 2010. All rights reserved.
+//  Copyright Martin Jansen 2010. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>

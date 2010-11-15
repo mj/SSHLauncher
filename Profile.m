@@ -3,7 +3,7 @@
 //  SSHLauncher
 //
 //  Created by Martin Jansen on 11.05.10.
-//  Copyright 2010 Bauer + Kirch GmbH. All rights reserved.
+//  Copyright 2010 Martin Jansen. All rights reserved.
 //
 
 #import "Profile.h"
