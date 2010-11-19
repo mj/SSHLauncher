@@ -128,8 +128,14 @@
 {
     UKKQueue* queue = [UKKQueue sharedFileWatcher];
     
-    [queue addPathToQueue:[[NSFileManager defaultManager] applicationSupportDirectory]];
+    NSString *path = [[NSFileManager defaultManager] applicationSupportDirectory];
     
+    /* Depending on which application one uses to edit the property list, UKKQueue
+     * either detects a write on the directory or the file itself.
+     */
+    [queue addPathToQueue:path];
+    [queue addPathToQueue:[NSString stringWithFormat:@"%@/Profiles.plist", path]];
+
     NSWorkspace* workspace = [NSWorkspace sharedWorkspace];
     NSNotificationCenter* notificationCenter = [workspace notificationCenter];
 
