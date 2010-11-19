@@ -141,12 +141,8 @@
 
 - (void) configurationDidChange: (id) sender
 {
-    NSMenu* oldMenu = [statusItem menu];
-    NSMenu* newMenu = [self createMenu];
-    
+    NSMenu* newMenu = [self createMenu];    
     [statusItem setMenu:newMenu];
-    [newMenu release];
-    [oldMenu release];
 }
 
 @end
