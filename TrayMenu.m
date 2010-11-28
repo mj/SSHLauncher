@@ -58,8 +58,11 @@
                         "end tell\n"
                         "tell application \"Terminal\" to do script \"%@\" in the last tab of window 1\n", ssh];
 
-    NSAppleScript *script = [[NSAppleScript alloc] initWithSource:command];
-    [script executeAndReturnError:nil];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{        
+        NSAppleScript *script = [[NSAppleScript alloc] initWithSource:command];
+        [script executeAndReturnError:nil];
+    });
+    
 }
 
 - (NSMenu*) createMenuFromSection:(Section*) aSection withZone:(NSZone*) aMenuZone
