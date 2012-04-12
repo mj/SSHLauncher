@@ -52,9 +52,7 @@
 
     NSString* command = [NSString stringWithFormat:@"activate application \"Terminal\"\n"
                         "tell application \"System Events\"\n"
-                        "    tell process \"Terminal\"\n"
-                        "        keystroke \"t\" using command down\n"
-                        "    end tell\n"
+                        "    keystroke \"t\" using {command down}\n"
                         "end tell\n"
                         "tell application \"Terminal\" to do script \"%@\" in the last tab of window 1\n", ssh];
 
