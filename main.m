@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "TrayMenu.h";
+#import "TrayMenu.h"
 
 int main(int argc, char *argv[])
 {

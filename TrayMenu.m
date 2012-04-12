@@ -12,7 +12,7 @@
 #import "ProfileReader.h"
 #import "Section.h"
 #import "UKKQueue.h"
-#import "NSFileManager+MJAdditions.h";
+#import "NSFileManager+MJAdditions.h"
 
 #pragma mark private method definitions
 

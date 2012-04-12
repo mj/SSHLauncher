@@ -17,10 +17,10 @@
     int port;
 }
 
-@property (retain) NSString* section;
-@property (retain) NSString* hostname;
+@property (retain, nonatomic) NSString* section;
+@property (retain, nonatomic) NSString* hostname;
 @property int port;
-@property (retain) NSString* username;
-@property (retain) NSString* label;
+@property (retain, nonatomic) NSString* username;
+@property (retain, nonatomic) NSString* label;
 
 @end
