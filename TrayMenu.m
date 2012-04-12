@@ -48,7 +48,7 @@
 {
     Profile* profile = [sender profile];
 
-    NSString *ssh = [NSString stringWithFormat:@"ssh -p %d %@@%@", profile.port, profile.username, profile.hostname];
+    NSString *ssh = [NSString stringWithFormat:@"ssh -t -p %d %@@%@", profile.port, profile.username, profile.hostname];
 
     NSString* command = [NSString stringWithFormat:@"activate application \"Terminal\"\n"
                         "tell application \"System Events\"\n"
