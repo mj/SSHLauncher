@@ -13,6 +13,7 @@
 @synthesize section;
 @synthesize hostname;
 @synthesize username;
+@synthesize command;
 @synthesize label;
 @synthesize port;
 
@@ -23,6 +24,7 @@
     if (self) {
         port = 22;
         hostname = @"";
+        command = @"";
         username = [NSUserName() copy];
         label = @"";
     }

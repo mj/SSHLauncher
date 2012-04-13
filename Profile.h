@@ -13,6 +13,7 @@
     NSString* section;
     NSString* hostname;
     NSString* username;
+    NSString* command;
     NSString* label;
     int port;
 }
@@ -21,6 +22,7 @@
 @property (retain, nonatomic) NSString* hostname;
 @property int port;
 @property (retain, nonatomic) NSString* username;
+@property (retain, nonatomic) NSString* command;
 @property (retain, nonatomic) NSString* label;
 
 @end

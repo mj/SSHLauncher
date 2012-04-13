@@ -48,7 +48,7 @@
 {
     Profile* profile = [sender profile];
 
-    NSString *ssh = [NSString stringWithFormat:@"ssh -t -p %d %@@%@", profile.port, profile.username, profile.hostname];
+    NSString *ssh = [NSString stringWithFormat:@"ssh %@ -p %d %@@%@ %@", [profile.command length] ? @"-t" : @"", profile.port, profile.username, profile.hostname, profile.command];
 
     NSString* command = [NSString stringWithFormat:@"activate application \"Terminal\"\n"
                         "tell application \"System Events\"\n"
@@ -58,6 +58,7 @@
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{        
         NSAppleScript *script = [[NSAppleScript alloc] initWithSource:command];
+        [script compileAndReturnError:nil];
         [script executeAndReturnError:nil];
     });
     
